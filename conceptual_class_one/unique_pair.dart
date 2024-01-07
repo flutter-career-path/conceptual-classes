@@ -1,4 +1,6 @@
-List<List<int>> findUniquePairs(List<int> list) {
+
+// Time complexity of this function is O(n2)
+List<List<int>> findPairs(List<int> list) {
   List<List<int>> uniquePairs = [];
 
   for (int i = 0; i < list.length - 1; i++) {
@@ -11,7 +13,7 @@ List<List<int>> findUniquePairs(List<int> list) {
 }
 
 void main() {
-  List<int> numbers = [1,2,3,4];
-  List<List<int>> uniquePairs = findUniquePairs(numbers);
+  List<int> numbers = [1, 2, 3, 4];
+  List<List<int>> uniquePairs = findPairs(numbers);
   print(uniquePairs);
 }

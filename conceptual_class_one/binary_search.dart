@@ -1,3 +1,4 @@
+// Time complexity of the following function is O(log(n))
 int binarySearch(List<int> sortedList, int target) {
   int l = 0;
   int r = sortedList.length - 1;
@@ -10,6 +11,16 @@ int binarySearch(List<int> sortedList, int target) {
       l = m +1;
     } else {
       r = m -1;
+    }
+  }
+  return -1;
+}
+
+// Time complexity of the function is O(n)
+int normalSearch(List<int> sortedList, int target) {
+  for (int i = 0; i<sortedList.length; i++) {
+    if (sortedList[i] == target) {
+      return i;
     }
   }
   return -1;
